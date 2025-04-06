@@ -9,7 +9,7 @@ function App() {
         {/* <Route path="/signin" element={<SignIn />} />
         <Route path="/createCourse" element={<CourseCreate />} /> */}
         {/* <Route path="/" element={<Main />} /> */}
-        <Route path="/" element={<Main_Copy />} />
+        <Route path="/Internal-Web-Sheet-Project" element={<Main_Copy />} />
         <Route path="/print" element={<PrintablePage />} />
         </Routes>
   </Router>

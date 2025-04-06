@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Internal-Web-Sheet-Project/static/css/main.a154ff85.css",
+    "main.js": "/Internal-Web-Sheet-Project/static/js/main.bcb7e706.js",
+    "index.html": "/Internal-Web-Sheet-Project/index.html",
+    "main.a154ff85.css.map": "/Internal-Web-Sheet-Project/static/css/main.a154ff85.css.map",
+    "main.bcb7e706.js.map": "/Internal-Web-Sheet-Project/static/js/main.bcb7e706.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a154ff85.css",
+    "static/js/main.bcb7e706.js"
+  ]
+}
