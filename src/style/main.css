@@ -1,0 +1,148 @@
+/* General styles */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+  }
+  
+  /* Main container styles */
+  .mainContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  .header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Form container styles */
+  .formContainer {
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* This will space out the label and checkbox */
+    align-items: center; /* Vertically align the elements in the row */
+    padding-right: 20px; /* Add some padding to ensure checkbox doesn't touch the edge */
+  }
+  
+  /* Style for the checkbox label */
+  .checkboxLabel {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .checkboxLabel input {
+    margin-right: 5px;
+  }
+  
+  /* Row layout for inputs */
+  .inputRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* This ensures the items are spread out */
+    margin-bottom: 15px;
+  }
+  
+  .inputRow label,
+  .inputRow input {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Make the inputs responsive */
+  .inputRow input {
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Style the submit button */
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto; /* Allow button width to adjust naturally */
+    max-width: 250px; /* Set a maximum width to make sure it doesn't stretch too wide */
+    margin: 20px auto; /* Center the button horizontally */
+    display: block; /* Make the button a block-level element */
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  /* Responsive Styles for small devices */
+  @media (max-width: 768px) {
+    /* Stack the inputs into columns for smaller screens */
+    .inputRow {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .inputRow label,
+    .inputRow input {
+      margin-bottom: 8px;
+      width: 100%; /* Make inputs take up the full width */
+    }
+  
+    /* Ensure the header text and the form look good on small screens */
+    .header {
+      font-size: 24px;
+      padding: 10px;
+    }
+  
+    h3 {
+      font-size: 18px;
+      padding-right: 10px; /* Adjust padding */
+    }
+  
+    /* Ensure checkbox fits well on small screens */
+    .checkboxLabel {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  
+    button {
+      width: 100%;
+      font-size: 18px; /* Make the button larger on smaller screens */
+    }
+  }
+  
