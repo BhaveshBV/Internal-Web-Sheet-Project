@@ -52,7 +52,7 @@ function Main_Copy() {
 
     if (formData["cat6"]) {
       printData.push({
-        size: "CAT 6",
+        size: "CAT 6 Cable",
         bigCoil: false,
         values: [{ color: "", value:formData["cat6"] + " Meter" }],
       })
