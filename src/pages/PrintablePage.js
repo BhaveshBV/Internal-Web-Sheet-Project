@@ -1,9 +1,9 @@
 // PrintablePage.js
 import React, { useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-// import jsPDF from 'jspdf';
+import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-// import * as XLSX from 'xlsx';
+import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 
 function PrintablePage() {
@@ -83,12 +83,12 @@ function PrintablePage() {
         {printData.map((entry, idx) => (
           <div key={idx} style={{ marginBottom: '20px' }}>
             <h3>
-              {entry.size} MM {entry.bigCoil ? 'Big Coil' : ''}
+              {entry.size} {entry.bigCoil ? 'Big Coil' : ''}
             </h3>
             <ul>
               {entry.values.map((val, i) => (
                 <li key={i}>
-                  {val.color} - {val.value}
+                  {val.color ? `${val.color} - ${val.value}` : val.value}
                 </li>
               ))}
             </ul>

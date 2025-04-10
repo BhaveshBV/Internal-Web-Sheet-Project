@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Backend",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/Backend/server.js",
+        "cwd": "${workspaceFolder}/Backend",
+        "sourceMaps": false,
+        "env": {
+          "NODE_ENV": "development"
+        }
+      },
+      {
+        "name": "Frontend",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:3000/Internal-Web-Sheet-Project",
+        "webRoot": "${workspaceFolder}"
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Launch All",
+        "configurations": ["Backend", "Frontend"]
+      }
+    ]
+  }
+  

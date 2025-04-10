@@ -1,28 +1,29 @@
 {
   "name": "internal-web-sheet-project",
   "version": "1.0.0",
-  "homepage": "https://bhaveshbv.github.io/Internal-Web-Sheet-Project/",  
+  "homepage": "https://bhaveshbv.github.io/Internal-Web-Sheet-Project/",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
-
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
     "react": "^19.1.0",
     "react-router-dom": "^7.5.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "xlsx": "^0.18.5"
   },
   "browserslist": {
     "production": [

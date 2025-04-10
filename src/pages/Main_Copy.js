@@ -16,6 +16,15 @@ function Main_Copy() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   const numValue = value === '' ? '' : Number(value);
+  //   if (value === '' || !isNaN(numValue)) {
+  //     setFormData(prev => ({ ...prev, [name]: numValue }));
+  //   }
+  // };
+  
+
   const handleCheckboxChange = (size) => (e) => {
     setCoilStates(prev => ({ ...prev, [size]: e.target.checked }));
   };
@@ -34,13 +43,44 @@ function Main_Copy() {
 
       if (entries.length) {
         printData.push({
-          size: size.replace('_', '.'),
+          size: size.replace('_', '.') + " MM",
           bigCoil: coilStates[size] || false,
           values: entries,
         });
       }
     });
 
+    if (formData["cat6"]) {
+      printData.push({
+        size: "CAT 6",
+        bigCoil: false,
+        values: [{ color: "", value:formData["cat6"] + " Meter" }],
+      })
+    };
+    
+    if (formData["channel"]) {
+      printData.push({
+        size: "Channel Cable",
+        bigCoil: false,
+        values: [{ color: "", value:formData["channel"]  + " Meter"}],
+      })
+    };
+
+    if (formData["fiber"]) {
+      printData.push({
+        size: "Fiber Optic Cable",
+        bigCoil: false,
+        values: [{ color: "", value:formData["fiber"] + " Meter" }],
+      })
+    };
+
+    if (formData["taperole"]) {
+      printData.push({
+        size: "Tape Role",
+        bigCoil: false,
+        values: [{ color: "", value:formData["taperole"]  }],
+      })
+    };
     // Navigate to printable page passing printData in location state
     navigate('/print', { state: { printData } });
   };
@@ -80,9 +120,45 @@ function Main_Copy() {
                     />
                   </div>
                 ))}
+                
               </div>
             </div>
           ))}
+          <h3>
+            CAT 6
+          </h3>
+          <div>
+            <label htmlFor="cat6"></label>
+            <input className = 'inputRow' type="number" id='cat6' name='cat6'placeholder='In Meters' onChange={handleChange}
+            />
+          </div>
+
+          <h3>
+            Channel Cable
+          </h3>
+          <div>
+            <label htmlFor="channel"></label>
+            <input className = 'inputRow' type="number" id='channel' name='channel'placeholder='In Meters' onChange={handleChange}
+            />
+          </div>
+
+          <h3>
+            Fiber Optic Cable
+          </h3>
+          <div>
+            <label htmlFor="fiber"></label>
+            <input className = 'inputRow' type="number" id='fiber' name='fiber'placeholder='In Meters' onChange={handleChange}
+            />
+          </div>
+
+          <h3>
+            Tape Roles
+          </h3>
+          <div>
+            <label htmlFor="taperole"></label>
+            <input className = 'inputRow' type="number" id='taperole' name='taperole' placeholder='In numbers' onChange={handleChange}
+            />
+          </div>
           <button type="submit">Submit</button>
         </form>
       </div>
